@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>God Idiom | HOLLOW HEART</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <div class="logo">GOD IDIOM</div>
+        <a href="#newsletter" class="nav-link">UPDATES</a>
+      </nav>
+
+      <header class="hero">
+        <div class="cover-art-wrapper">
+          <img
+            src="Images/cover.jpg"
+            alt="Hollow Heart Album Cover"
+            class="cover-art"
+          />
+        </div>
+
+        <div class="hero-content">
+          <h2>New EP Coming Soon</h2>
+          <h1>HOLLOW HEART</h1>
+          <p class="hero-desc">
+            A journey through a caotic period. Seven tracks of ethereal
+            soundscapes and dark rhythm.
+          </p>
+
+          <div
+            style="
+              display: flex;
+              gap: 1rem;
+              justify-content: flex-start;
+              flex-wrap: wrap;
+            "
+          >
+            <a href="#tracks" class="btn btn-primary">Listen Now</a>
+
+            <a href="#" target="_blank" class="btn btn-outline">Stream Soon</a>
+          </div>
+        </div>
+      </header>
+
+      <section id="tracks" class="tracklist-section">
+        <h3 class="section-title">TRACKLIST</h3>
+
+        <div class="track-row">
+          <div class="track-info">
+            <button class="play-btn" onclick="togglePlay(this)">▶</button>
+
+            <div class="track-meta">
+              <div class="track-title">Crush</div>
+              <div class="track-duration">2:48</div>
+            </div>
+
+            <input
+              type="range"
+              id="progress"
+              value="0"
+              step="0.1"
+              min="0"
+              max="100"
+            />
+
+            <input
+              type="range"
+              id="volume"
+              min="0"
+              max="1"
+              step="0.01"
+              value="1"
+            />
+
+            <canvas
+              id="visualizer"
+              width="400"
+              height="50"
+              padding="9px"
+            ></canvas>
+          </div>
+
+          <a href="https://idiom6.gumroad.com/l/naxhhy" class="buy-track-btn"
+            >Buy $0.99</a
+          >
+        </div>
+
+        <div class="track-row">
+          <div class="track-info">
+            <button class="play-btn" onclick="togglePlay(this)">▶</button>
+            <div>
+              <div class="track-title">Vice</div>
+              <div class="track-duration">2:39</div>
+            </div>
+          </div>
+          <a href="https://idiom6.gumroad.com/l/naxhhy l" class="buy-track-btn"
+            >2/2/2026</a
+          >
+        </div>
+
+        <div class="track-row">
+          <div class="track-info">
+            <button class="play-btn" onclick="togglePlay(this)">▶</button>
+            <div>
+              <div class="track-title">Lil Mami</div>
+              <div class="track-duration">2:05</div>
+            </div>
+          </div>
+          <a href="https://idiom6.gumroad.com/l/naxhhy" class="buy-track-btn"
+            >2/2/2026</a
+          >
+        </div>
+
+        <div class="track-row">
+          <div class="track-info">
+            <button class="play-btn" onclick="togglePlay(this)">▶</button>
+            <div>
+              <div class="track-title">Public</div>
+              <div class="track-duration">2:31</div>
+            </div>
+          </div>
+          <a href="https://idiom6.gumroad.com/l/naxhhy" class="buy-track-btn"
+            >2/2/2026</a
+          >
+        </div>
+
+        <div class="track-row">
+          <div class="track-info">
+            <button class="play-btn" onclick="togglePlay(this)">▶</button>
+            <div>
+              <div class="track-title">POS</div>
+              <div class="track-duration">2:31</div>
+            </div>
+          </div>
+          <a href="https://idiom6.gumroad.com/l/naxhhy" class="buy-track-btn"
+            >2/2/2026</a
+          >
+        </div>
+
+        <div class="track-row">
+          <div class="track-info">
+            <button class="play-btn" onclick="togglePlay(this)">▶</button>
+            <div>
+              <div class="track-title">Deceiver</div>
+              <div class="track-duration">3:30</div>
+            </div>
+          </div>
+          <a href="#" class="buy-track-btn">2/2/2026</a>
+        </div>
+
+        <div class="track-row">
+          <div class="track-info">
+            <button class="play-btn" onclick="togglePlay(this)">▶</button>
+            <div>
+              <div class="track-title">We Just?</div>
+              <div class="track-duration">3:20</div>
+            </div>
+          </div>
+          <a href="https://idiom6.gumroad.com/l/naxhhy" class="buy-track-btn"
+            >2/2/2026</a
+          >
+        </div>
+      </section>
+
+      <section id="newsletter" class="newsletter">
+        <h3>Join the newsletter</h3>
+        <p style="color: var(--text-muted);">
+          Sign up for exclusive demos, tour dates, and merch drops.
+        </p>
+
+        <form
+          class="newsletter-form"
+          action="https://formsubmit.co/GodIdiom@gmail.com"
+          method="POST"
+        >
+          <input
+            type="email"
+            name="email"
+            placeholder="Enter your email..."
+            class="email-input"
+            required
+          />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://yoursite.com/#newsletter"
+          />
+
+          <button type="submit" class="btn btn-primary" style="border: none;">
+            Subscribe
+          </button>
+          <input type="hidden" name="_subject" value="New music subscriber" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_template" value="table" />
+        </form>
+        <p
+          id="success-msg"
+          style="display: none; color: #4ade80; margin-top: 1rem;"
+        >
+          Welcome to the void.
+        </p>
+      </section>
+
+      <footer>
+        <div class="social-links">
+          <a
+            href="https://www.youtube.com/@GodIdiom"
+            target="_blank"
+            class="social-icon"
+            aria-label="YouTube"
+          >
+            <svg viewbox="0 0 24 24">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="https://www.tiktok.com/@godi.am"
+            target="_blank"
+            class="social-icon"
+            aria-label="TikTok"
+          >
+            <svg viewbox="0 0 24 24">
+              <path
+                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93v8.88c-.08 3.25-2.84 5.95-6.19 5.89-3.34-.06-5.99-2.82-5.93-6.16.06-3.3 2.82-5.91 6.12-5.87.1.001.2.006.3.016v4.06c-1.13-.15-2.22.6-2.45 1.71-.24 1.12.36 2.27 1.41 2.71 1.18.5 2.59-.09 3.09-1.29.17-.41.25-.86.25-1.31V6.52c0-2.16 0-4.32-.03-6.48-.01-.01-.02-.02-.02-.02h.37z"
+              />
+            </svg>
+          </a>
+
+          <a
+            href="#"
+            target="_blank"
+            class="social-icon"
+            aria-label="Instagram"
+          >
+            <svg viewbox="0 0 24 24">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.069-4.85.069-3.204 0-3.584-.012-4.849-.069-3.225-.149-4.771-1.664-4.919-4.919-.058-1.265-.069-1.644-.069-4.849 0-3.204.012-3.584.069-4.849.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+          </a>
+        </div>
+
+        © 2026 God Idiom. All Rights Reserved. <br />
+        <a
+          href="mailto:contact@godidiom.com"
+          style="
+            color: inherit;
+            text-decoration: none;
+            margin-top: 5px;
+            display: inline-block;
+          "
+          >Contact Management</a
+        >
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
